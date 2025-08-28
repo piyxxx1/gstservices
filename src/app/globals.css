@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@400;600;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fade-in-left {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fade-in-right {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .animate-fade-in-up { 
+    animation: fade-in-up 0.8s ease-out forwards; 
+  }
+  
+  .animate-fade-in-left { 
+    animation: fade-in-left 0.8s ease-out forwards; 
+  }
+  
+  .animate-fade-in-right { 
+    animation: fade-in-right 0.8s ease-out forwards; 
+  }
+  
+  .animate-float { 
+    animation: float 3s ease-in-out infinite; 
+  }
+  
+  .animate-float-gentle { 
+    animation: float-gentle 4s ease-in-out infinite; 
+  }
+}
+
+@theme {
+  /* Shadcn/UI Colors */
+  --color-background: #FFFFFF;
+  --color-foreground: #374151; /* Primary text color */
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #374151;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #374151;
+
+  --color-primary: #1877F2; /* Primary Blue */
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #F9FAFB; /* Light Gray */
+  --color-secondary-foreground: #374151;
+
+  --color-muted: #F9FAFB; /* Light Gray */
+  --color-muted-foreground: #9CA3AF; /* Secondary text color */
+
+  --color-accent: #F9FAFB; /* Light Gray */
+  --color-accent-foreground: #374151;
+
+  --color-destructive: #EF4444; /* Example red, adjust if needed */
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-border: #E5E7EB; /* Border Gray */
+  --color-input: #E5E7EB; /* Border Gray */
+  --color-ring: #1877F2; /* Primary Blue */
+
+  --color-chart-1: #1877F2; /* Primary Blue */
+  --color-chart-2: #10B981; /* Success Green */
+  --color-chart-3: #F59E0B; /* Orange Accent */
+  --color-chart-4: #EC4899; /* Pink Accent */
+  --color-chart-5: #374151; /* Text Primary */
+
+  --color-sidebar: #F9FAFB;
+  --color-sidebar-foreground: #374151;
+  --color-sidebar-primary: #1877F2;
+  --color-sidebar-primary-foreground: #FFFFFF;
+  --color-sidebar-accent: #E5E7EB;
+  --color-sidebar-accent-foreground: #374151;
+  --color-sidebar-border: #E5E7EB;
+  --color-sidebar-ring: #1877F2;
+
+  /* Custom Design Tokens */
+  --color-text-primary: #374151;
+  --color-text-secondary: #9CA3AF;
+  --color-success-green: #10B981;
+  --color-orange-accent: #F59E0B;
+  --color-pink-accent: #EC4899;
+  --color-border-gray: #E5E7EB;
+  --color-white: #FFFFFF;
+  --color-light-gray: #F9FAFB;
+
+  --font-display: "Gilroy", sans-serif;
+  --font-body: "Gilroy", sans-serif;
+
+  --radius-lg: 0.75rem; /* Card Border Radius: 12px */
+  --radius-md: 0.5rem; /* Button Border Radius: 8px */
+  --radius-sm: 0.25rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --chart-1: var(--color-chart-1);
+    --chart-2: var(--color-chart-2);
+    --chart-3: var(--color-chart-3);
+    --chart-4: var(--color-chart-4);
+    --chart-5: var(--color-chart-5);
+    --radius: var(--radius-lg); /* Default radius for Shadcn components */
+    --sidebar-background: var(--color-sidebar);
+    --sidebar-foreground: var(--color-sidebar-foreground);
+    --sidebar-primary: var(--color-sidebar-primary);
+    --sidebar-primary-foreground: var(--color-sidebar-primary-foreground);
+    --sidebar-accent: var(--color-sidebar-accent);
+    --sidebar-accent-foreground: var(--color-sidebar-accent-foreground);
+    --sidebar-border: var(--color-sidebar-border);
+    --sidebar-ring: var(--color-sidebar-ring);
+  }
+
+  /* No dark theme detected, so no .dark block */
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-text-primary);
+    line-height: 1.1;
+    font-weight: 800; /* Default to bold for headings */
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 600; /* SemiBold */
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--color-text-primary);
+  }
+
+  .text-lg {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .text-sm {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .font-bold {
+    font-weight: 800;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  .font-normal {
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Mobile-specific centering utilities */
+  .mobile-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-center {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  /* Ensure proper centering for mobile content */
+  .content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Prevent horizontal overflow on all elements */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Ensure sections don't overflow */
+  section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Prevent navigation menu overflow */
+  [data-radix-navigation-menu-content] {
+    max-width: 90vw !important;
+  }
+
+  /* Ensure all containers are properly constrained */
+  .container, .container-fluid {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Responsive image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better focus states for accessibility */
+  *:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* Smooth transitions for interactive elements */
+  a, button, [role="button"] {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
