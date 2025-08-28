@@ -126,8 +126,8 @@ export default function Header() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
-      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex-shrink-0">
+      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-0 sm:px-0">
+        <Link href="/" className="flex-shrink-0 pl-4 sm:pl-6">
           <Image
             src="/assest/LOGO.jpeg"
             alt="Company Logo"
@@ -138,7 +138,7 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Centered */}
         <NavigationMenu className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
           <NavigationMenuList className="flex space-x-8">
             <NavigationMenuItem>
@@ -179,7 +179,7 @@ export default function Header() {
         </NavigationMenu>
 
         {/* Desktop Login Button */}
-        <Button asChild variant="outline" className="hidden lg:flex h-auto rounded-lg border-primary px-6 py-[9px] text-sm font-semibold text-primary transition-colors hover:bg-primary/5 hover:text-primary">
+        <Button asChild variant="outline" className="hidden lg:flex h-auto rounded-lg border-primary px-6 py-[9px] text-sm font-semibold text-primary transition-colors hover:bg-primary/5 hover:text-primary mr-4 sm:mr-6">
           <a href="#">Login/Sign-up</a>
         </Button>
 

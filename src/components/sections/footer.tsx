@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 type FooterLink = {
   text: string;
@@ -211,15 +212,39 @@ const toolsColumns = [
 
 
 const socialIcons = [
-  { RLink: "https://www.facebook.com/clearfromcleartax", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602846766_footer_facebook-45.png?", alt: "fb" },
-  { RLink: "https://twitter.com/ClearfromCT?s=09", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602846849_footer_twitter-46.png?", alt: "twitter" },
-  { RLink: "https://www.linkedin.com/company/cleartaxindia/", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602846859_footer_linkedin-47.png?", alt: "linkedin" },
-  { RLink: "https://github.com/ClearTax", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602846934_footer_github-48.png?", alt: "github" },
-  { RLink: "https://www.instagram.com/clearfromcleartax/", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602846688_footer_instagram-49.png?", alt: "instagram" },
-  
+  { 
+    RLink: "https://twitter.com/ClearfromCT?s=09", 
+    icon: FaTwitter, 
+    alt: "twitter",
+    color: "#1DA1F2"
+  },
+  { 
+    RLink: "https://www.linkedin.com/company/cleartaxindia/", 
+    icon: FaLinkedin, 
+    alt: "linkedin",
+    color: "#0077B5"
+  },
+  { 
+    RLink: "https://www.instagram.com/clearfromcleartax/", 
+    icon: FaInstagram, 
+    alt: "instagram",
+    color: "#E4405F"
+  },
+  { 
+    RLink: "https://www.facebook.com/cleartax", 
+    icon: FaFacebook, 
+    alt: "facebook",
+    color: "#1877F2"
+  },
+  { 
+    RLink: "https://www.youtube.com/cleartax", 
+    icon: FaYoutube, 
+    alt: "youtube",
+    color: "#FF0000"
+  },
 ];
 
-const socialIconsBottom = [ ...socialIcons, { RLink: "https://www.youtube.com/cleartaxindia", src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1631855308_youtube-51.png?", alt: "youtube" }];
+
 
 const FooterLinkList = ({ links }: { links: FooterLink[] }) => (
   <ul className="space-y-3">
@@ -255,14 +280,20 @@ const FooterSection = () => {
                        height={42}
                        className="w-32 sm:w-auto"
                      />
-                     <p className="mt-6 mb-3 text-white">Follow us on</p>
-                     <div className="flex space-x-3">
-                         {socialIcons.map(icon => (
-                           <a key={icon.alt} href={icon.RLink} target="_blank" rel="noopener noreferrer">
-                             <Image src={icon.src} alt={icon.alt} width={32} height={32} className="w-8 h-8 sm:w-8 sm:h-8"/>
-                           </a>
-                         ))}
-                     </div>
+                                           <p className="mt-6 mb-4 text-white font-medium">Follow us on</p>
+                                             <div className="flex space-x-4">
+                           {socialIcons.map(socialIcon => {
+                             const IconComponent = socialIcon.icon;
+                             return (
+                               <div key={socialIcon.alt} className="cursor-default group">
+                                 <IconComponent 
+                                   className="w-6 h-6 sm:w-6 sm:h-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                                   style={{ color: socialIcon.color }}
+                                 />
+                               </div>
+                             );
+                           })}
+                       </div>
                    </div>
                    <div className="w-full lg:w-auto">
                        <p className="text-white">Have a query?</p>
@@ -374,13 +405,19 @@ const FooterSection = () => {
                         <a href="#" className="hover:text-white transition-colors">Legal - Defmacro</a>
                         <a href="#" className="hover:text-white transition-colors">Legal - Xpedize</a>
                     </div>
-                    <div className="flex space-x-3">
-                         {socialIconsBottom.map(icon => (
-                           <a key={icon.alt} href={icon.RLink} target="_blank" rel="noopener noreferrer">
-                             <Image src={icon.src} alt={icon.alt} width={24} height={24} className="w-6 h-6"/>
-                           </a>
-                         ))}
-                    </div>
+                                         <div className="flex space-x-3">
+                          {socialIcons.map(socialIcon => {
+                            const IconComponent = socialIcon.icon;
+                            return (
+                              <div key={socialIcon.alt} className="cursor-default group">
+                                <IconComponent 
+                                  className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                                  style={{ color: socialIcon.color }}
+                                />
+                              </div>
+                            );
+                          })}
+                     </div>
                 </div>
 
             </div>
