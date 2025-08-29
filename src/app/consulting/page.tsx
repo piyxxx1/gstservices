@@ -155,17 +155,20 @@ export default function ConsultingPage() {
                <span className="font-semibold text-white">personalized mentorship programs</span>.
              </p>
              
-             {/* Enhanced CTA Button */}
-             <div className="flex justify-center mb-12">
-               <button className="group relative px-8 py-4 bg-white text-blue-600 rounded-xl font-bold text-base hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md">
-                 <span className="relative z-10 flex items-center justify-center">
-                   <span className="mr-2">📅</span>
-                   Schedule Consultation
-                   <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                 </span>
-                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </button>
-             </div>
+                           {/* Enhanced CTA Button */}
+              <div className="flex justify-center mb-12">
+                <a 
+                  href="tel:+919876543210" 
+                  className="group relative px-8 py-4 bg-white text-blue-600 rounded-xl font-bold text-base hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md cursor-pointer"
+                >
+                  <span className="relative z-10 flex items-center justify-center">
+                    <span className="mr-2">📅</span>
+                    Schedule Consultation
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+              </div>
              
              {/* Stats Row */}
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">

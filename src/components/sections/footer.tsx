@@ -250,9 +250,9 @@ const FooterLinkList = ({ links }: { links: FooterLink[] }) => (
   <ul className="space-y-3">
     {links.map((link, index) => (
       <li key={index}>
-        <a href={link.href} className="text-[#c1ccda] hover:text-white transition-colors duration-200">
+        <span className="text-[#c1ccda] cursor-default">
           {link.text}
-        </a>
+        </span>
       </li>
     ))}
   </ul>

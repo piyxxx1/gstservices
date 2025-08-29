@@ -12,7 +12,6 @@ interface ServiceInfo {
   description: string;
   href: string;
   category: string;
-  icon: string;
 }
 
 const servicesData: ServiceInfo[] = [
@@ -21,29 +20,25 @@ const servicesData: ServiceInfo[] = [
     title: "Trade License",
     description: "Obtain trade license for your business operations",
     href: "/services/trade-license",
-    category: "Certificates Registration",
-    icon: "📋"
+    category: "Certificates Registration"
   },
   {
     title: "Shop & Establishment",
     description: "Register your shop and establishment legally",
     href: "/services/shop-establishment",
-    category: "Certificates Registration",
-    icon: "🏪"
+    category: "Certificates Registration"
   },
   {
     title: "Food License",
     description: "FSSAI food license for food businesses",
     href: "/services/food-license",
-    category: "Certificates Registration",
-    icon: "🍽️"
+    category: "Certificates Registration"
   },
   {
     title: "GST Registration",
     description: "Quick and easy GST registration process",
     href: "/services/gst-registration",
-    category: "Certificates Registration",
-    icon: "📊"
+    category: "Certificates Registration"
   },
   
   // Companies Registration Category
@@ -51,29 +46,25 @@ const servicesData: ServiceInfo[] = [
     title: "Private Limited Company",
     description: "Start your business with private limited registration",
     href: "/services/private-limited-company",
-    category: "Companies Registration",
-    icon: "🏢"
+    category: "Companies Registration"
   },
   {
     title: "LLP Registration",
     description: "Limited Liability Partnership registration services",
     href: "/services/llp-registration",
-    category: "Companies Registration",
-    icon: "🤝"
+    category: "Companies Registration"
   },
   {
     title: "Partnership Firm",
     description: "Register your partnership firm easily",
     href: "/services/partnership-firm",
-    category: "Companies Registration",
-    icon: "👥"
+    category: "Companies Registration"
   },
   {
     title: "One Person Company",
     description: "Single person company registration",
     href: "/services/one-person-company",
-    category: "Companies Registration",
-    icon: "👤"
+    category: "Companies Registration"
   },
   
   // NGO Registration Category
@@ -81,22 +72,19 @@ const servicesData: ServiceInfo[] = [
     title: "Trust Registration",
     description: "Register your charitable trust",
     href: "/services/trust-registration",
-    category: "NGO Registration",
-    icon: "🤲"
+    category: "NGO Registration"
   },
   {
     title: "Society Registration",
     description: "Society registration for non-profit organizations",
     href: "/services/society-registration",
-    category: "NGO Registration",
-    icon: "🏛️"
+    category: "NGO Registration"
   },
   {
     title: "Section 8 Company",
     description: "Non-profit company registration under Section 8",
     href: "/services/section8-company",
-    category: "NGO Registration",
-    icon: "💝"
+    category: "NGO Registration"
   },
   
   // Other Certificates Category
@@ -104,39 +92,34 @@ const servicesData: ServiceInfo[] = [
     title: "Trademark Registration",
     description: "Protect your brand with trademark registration",
     href: "/services/trademark-registration",
-    category: "Other Certificates",
-    icon: "™️"
+    category: "Other Certificates"
   },
   {
     title: "ISO Certification",
     description: "ISO quality management system certification",
     href: "/services/iso-certification",
-    category: "Other Certificates",
-    icon: "🏆"
+    category: "Other Certificates"
   },
   {
     title: "MSME Registration",
     description: "Micro, Small and Medium Enterprises registration",
     href: "/services/msme-registration",
-    category: "Other Certificates",
-    icon: "🏭"
+    category: "Other Certificates"
   },
   {
     title: "Import Export Code",
     description: "IEC code for import export business",
     href: "/services/import-export-code",
-    category: "Other Certificates",
-    icon: "🚢"
+    category: "Other Certificates"
   },
   
   
 ];
 
-const ServiceCard = ({ title, description, href, icon }: ServiceInfo) => {
+const ServiceCard = ({ title, description, href }: ServiceInfo) => {
   return (
     <a href={href} className="group block h-full w-full touch-manipulation">
       <div className="flex h-full flex-col rounded-xl bg-white px-6 py-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50 border border-gray-100 hover:border-blue-200 active:bg-blue-100 active:border-blue-300 focus:bg-blue-100 focus:border-blue-300">
-        <div className="mb-4 text-3xl">{icon}</div>
         <h4 className="font-display text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-700 group-active:text-blue-800 group-focus:text-blue-800 transition-colors duration-300">
           {title}
         </h4>
@@ -161,37 +144,32 @@ const CategorySection = ({ category, services, isActive }: { category: string; s
           gradient: "from-blue-600 to-blue-800",
           bgColor: "bg-blue-50",
           borderColor: "border-blue-200",
-          icon: "📋"
         };
       case "Companies Registration":
         return {
           gradient: "from-green-600 to-green-800",
           bgColor: "bg-green-50",
           borderColor: "border-green-200",
-          icon: "🏢"
         };
       case "NGO Registration":
         return {
           gradient: "from-purple-600 to-purple-800",
           bgColor: "bg-purple-50",
           borderColor: "border-purple-200",
-          icon: "🤲"
         };
       case "Other Certificates":
         return {
           gradient: "from-orange-600 to-orange-800",
           bgColor: "bg-orange-50",
           borderColor: "border-orange-200",
-          icon: "🏆"
         };
       
-      default:
-        return {
-          gradient: "from-gray-600 to-gray-800",
-          bgColor: "bg-gray-50",
-          borderColor: "border-gray-200",
-          icon: "📋"
-        };
+             default:
+         return {
+           gradient: "from-gray-600 to-gray-800",
+           bgColor: "bg-gray-50",
+           borderColor: "border-gray-200"
+         };
     }
   };
 
@@ -201,17 +179,14 @@ const CategorySection = ({ category, services, isActive }: { category: string; s
 
   return (
     <div className="mb-16">
-      <div className="text-center mb-10">
-        <div className="flex items-center justify-center mb-4">
-          <span className="text-4xl mr-3">{style.icon}</span>
-          <h3 className="text-3xl md:text-4xl font-bold">
-            <span className={`bg-gradient-to-r ${style.gradient} bg-clip-text text-transparent`}>
-              {category}
-            </span>
-          </h3>
-        </div>
-        <div className={`w-32 h-1 bg-gradient-to-r ${style.gradient} mx-auto rounded-full`}></div>
-      </div>
+             <div className="text-center mb-10">
+         <h3 className="text-3xl md:text-4xl font-bold mb-4">
+           <span className={`bg-gradient-to-r ${style.gradient} bg-clip-text text-transparent`}>
+             {category}
+           </span>
+         </h3>
+         <div className={`w-32 h-1 bg-gradient-to-r ${style.gradient} mx-auto rounded-full`}></div>
+       </div>
       
       <div className={`${style.bgColor} rounded-2xl p-8 border-2 ${style.borderColor} shadow-lg`}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
