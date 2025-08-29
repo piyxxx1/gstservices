@@ -13,25 +13,25 @@ const categories: CategoryCardProps[] = [
     title: "For Individuals",
     subtitle: <>For salaried, self <br />employed professionals.</>,
     description: "File income tax returns in 3 min, invest and grow your wealth, get expert assistance.",
-    link: "/products"
+    link: "/services"
   },
   {
     title: "For Tax Experts",
     subtitle: <>For tax experts and<br/>professionals.</>,
     description: "Explore how tax experts save 2-7% in taxes for their clients with our GST, ITR and TDS suite.",
-    link: "/products"
+    link: "/services"
   },
   {
     title: "For SMEs",
     subtitle: <>For less than ₹50Cr<br />turnover businesses.</>,
     description: "Explore SME suite including GST, Invoicing and TDS solution along with Clear app.",
-    link: "/products"
+    link: "/services"
   },
   {
     title: "For Enterprise",
     subtitle: <>For more than ₹50Cr<br />turnover businesses.</>,
     description: "Explore enterprise-grade stack of GST, e-Invoicing, e-Waybill, Vendor solutions and more.",
-    link: "/products"
+    link: "/services"
   }
 ];
 
@@ -86,9 +86,9 @@ const UserCategories = () => {
         </div>
         <div className="w-full lg:w-5/12 mb-8 lg:mb-0 order-1 lg:order-2">
           <div className="text-center lg:text-left lg:pl-24">
-            <h2 className="font-bold text-text-primary text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] leading-tight">
-              Products<br />for everyone
-            </h2>
+                         <h2 className="font-bold text-text-primary text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] leading-tight">
+               Services<br />for everyone
+             </h2>
             <p className="text-sm sm:text-base leading-relaxed text-[#515151] mt-3 sm:mt-4 max-w-lg mx-auto lg:mx-0">
               Built for scale, made by experts and secure by design.
               Bringing you maximum tax savings, unmatched speed and

@@ -21,55 +21,55 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const products = [
-  { title: "Income Tax e Filing", href: "/products", description: "File your income tax returns online" },
-  { title: "Tax Planning", href: "/products", description: "Plan your taxes efficiently" },
-  { title: "ClearGST", href: "/products", description: "GST filing and compliance" },
-  { title: "ClearTDS", href: "/products", description: "TDS filing and management" },
-  { title: "ClearInvestment", href: "/products", description: "Investment and mutual funds" },
-  { title: "ClearServices", href: "/products", description: "Professional tax services" },
+const services = [
+  { title: "Income Tax e Filing", href: "/services", description: "File your income tax returns online" },
+  { title: "Tax Planning", href: "/services", description: "Plan your taxes efficiently" },
+  { title: "ClearGST", href: "/services", description: "GST filing and compliance" },
+  { title: "ClearTDS", href: "/services", description: "TDS filing and management" },
+  { title: "ClearInvestment", href: "/services", description: "Investment and mutual funds" },
+  { title: "ClearServices", href: "/services", description: "Professional tax services" },
 ];
 
 const resources = [
   {
     title: "Case Studies",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196404_case_studies.png",
     category: "read",
   },
   {
     title: "Opinion Notes",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683877966_opinion_notes.png",
     category: "read",
   },
   {
     title: "Product Guides",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196200_product_guides.png",
     category: "read",
   },
   {
     title: "Webinars",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196239_webinars.png",
     category: "watch",
   },
   {
     title: "Product Guides - Videos",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196252_product_guidevideos.png",
     category: "watch",
   },
   {
     title: "Events",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196264_events.png",
     category: "engage",
   },
   {
     title: "FAQs",
-    href: "/resources",
+    href: "/consulting",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196276_faqs.png",
     category: "engage",
   },
@@ -151,19 +151,19 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <a 
-                href="/products" 
+                href="/services" 
                 className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
               >
-                <span>Products</span>
+                <span>Services</span>
               </a>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               <a 
-                href="/resources" 
+                href="/consulting" 
                 className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
               >
-                <span>Resources</span>
+                <span>Consulting</span>
               </a>
             </NavigationMenuItem>
 
@@ -222,21 +222,21 @@ export default function Header() {
                     <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                   </a>
                   <a 
-                    href="/products" 
+                    href="/services" 
                     className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-green-600 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-green-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="mr-3 text-lg">📦</span>
-                    <span>Products</span>
+                    <span className="mr-3 text-lg">🔧</span>
+                    <span>Services</span>
                     <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                   </a>
                   <a 
-                    href="/resources" 
+                    href="/consulting" 
                     className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-purple-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-purple-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="mr-3 text-lg">📚</span>
-                    <span>Resources</span>
+                    <span className="mr-3 text-lg">💼</span>
+                    <span>Consulting</span>
                     <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                   </a>
                   <a 

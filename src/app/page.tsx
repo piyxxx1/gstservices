@@ -3,7 +3,7 @@ import Hero from "@/components/sections/hero";
 import ServicesOverview from "@/components/sections/services-overview";
 import NumbersStats from "@/components/sections/numbers-stats";
 import UserCategories from "@/components/sections/user-categories";
-import ProductsForEveryone from "@/components/sections/products-for-everyone";
+import ServicesForEveryone from "@/components/sections/products-for-everyone";
 import ITRFilingServices from "@/components/sections/itr-filing-services";
 import PlugAndPlay from "@/components/sections/plug-and-play";
 import DesignedByExperts from "@/components/sections/designed-by-experts";
@@ -22,7 +22,7 @@ export default function Home() {
       <ServicesOverview />
       <NumbersStats />
       <UserCategories />
-      <ProductsForEveryone />
+      <ServicesForEveryone />
       <ITRFilingServices />
       <PlugAndPlay />
       <DesignedByExperts />

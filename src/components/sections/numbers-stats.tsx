@@ -33,35 +33,35 @@ const StatCard: React.FC<StatCardProps> = ({ value, valueColor, plusSignColor, d
 const NumbersStats = () => {
   const statsData: StatCardProps[] = [
     {
-      value: "250M",
+      value: "7000",
       valueColor: "text-primary",
       plusSignColor: "text-success-green",
       description: "invoices uploaded",
       iconSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1605873305_invoiceuploaded-8.svg?",
     },
     {
-      value: "6M",
+      value: "600",
       valueColor: "text-success-green",
       plusSignColor: "text-primary",
       description: "Businesses visible",
       iconSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1605873294_businessvisible-9.svg?",
     },
     {
-      value: "$300B",
+      value: "30000",
       valueColor: "text-success-green",
       plusSignColor: "text-pink-accent",
       description: "trade value filled",
       iconSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1605873451_tradevaluefilled-10.svg?",
     },
     {
-      value: "35,000",
+      value: "350",
       valueColor: "text-primary",
       plusSignColor: "text-pink-accent",
       description: "retail investors",
       iconSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1605873368_retailinvestor-11.svg?",
     },
     {
-      value: "6M",
+      value: "8000",
       valueColor: "text-orange-accent",
       plusSignColor: "text-pink-accent",
       description: "tax returns filed",

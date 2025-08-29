@@ -24,19 +24,19 @@ const faqData = [
   },
   {
     question: "How do I check TDS details from my form 26AS?",
-    answer: "You can check your Form 26AS from your e-filing login. ClearTax's e-filing software auto-populates the TDS details from your Form 26AS in your income tax return.",
+    answer: "You can check your Form 26AS from your e-filing login. Palm Print's e-filing software auto-populates the TDS details from your Form 26AS in your income tax return.",
   },
   {
     question: "How can I claim an income tax refund?",
     answer: "You can claim an income tax refund by e-filing your income tax return. An e-filing enables you to claim credit for excess TDS paid and a tax refund.",
   },
   {
-    question: "Is my data filed with ClearTax secure?",
-    answer: "ClearTax uses a 128 bit SSL encryption for transmission of data and enables complete data privacy. Also, ClearTax does not share its data with unaffiliated third parties.",
+    question: "Is my data filed with Palm Print secure?",
+    answer: "Palm Print uses a 128 bit SSL encryption for transmission of data and enables complete data privacy. Also, Palm Print does not share its data with unaffiliated third parties.",
   },
   {
-    question: "What are the GST services offered by ClearTax?",
-    answer: "ClearTax provides ClearTax GST filing software for accurate GST filing, reconciliation and claiming ITC. ClearTax GST facilitates the generation of e-invoices and e-way bill.",
+    question: "What are the GST services offered by Palm Print?",
+    answer: "Palm Print provides Palm Print GST filing software for accurate GST filing, reconciliation and claiming ITC. Palm Print GST facilitates the generation of e-invoices and e-way bill.",
   },
   {
     question: "How to e-verify my ITR?",
@@ -71,9 +71,7 @@ export default function FaqSection() {
             </AccordionItem>
           ))}
         </Accordion>
-        <p className="text-center text-muted-foreground mt-8 sm:mt-12 text-sm sm:text-base">
-          Have queries? Visit our support center
-        </p>
+
       </div>
     </section>
   );

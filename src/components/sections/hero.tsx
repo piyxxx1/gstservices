@@ -257,14 +257,14 @@ const HeroSection = () => {
             <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl mb-2">
               <span className="text-yellow-300 animate-pulse">★</span>4.9/5
             </p>
-            <p className="text-white/90 font-semibold text-base sm:text-lg">45K+ Reviews</p>
+                            <p className="text-white/90 font-semibold text-base sm:text-lg">4K+ Reviews</p>
           </div>
+                      <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+              <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl mb-2">₹5 Cr+</p>
+              <p className="text-white/90 font-semibold text-base sm:text-lg">Refunds delivered last year</p>
+            </div>
           <div className="text-center sm:text-left bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl mb-2">₹1,050 Cr+</p>
-            <p className="text-white/90 font-semibold text-base sm:text-lg">Refunds delivered last year</p>
-          </div>
-          <div className="text-center sm:text-left bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl mb-2">7.5 M+</p>
+                          <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl mb-2">5000+</p>
             <p className="text-white/90 font-semibold text-base sm:text-lg">Users Trust Us</p>
           </div>
         </div>

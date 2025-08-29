@@ -295,12 +295,7 @@ const FooterSection = () => {
                            })}
                        </div>
                    </div>
-                   <div className="w-full lg:w-auto">
-                       <p className="text-white">Have a query?</p>
-                       <ul className="mt-3">
-                           <li><a href="#" className="text-[#c1ccda] hover:text-white transition-colors duration-200">Support</a></li>
-                       </ul>
-                   </div>
+
                 </div>
 
                 {/* Main Footer Grid */}

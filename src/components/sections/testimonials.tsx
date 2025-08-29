@@ -20,7 +20,7 @@ const testimonialsData = [
     name: "Aisha Khan",
     role: "Business Owner, TechFlow Solutions",
     linkText: "Explore products for Small Businesses",
-    linkHref: "/products",
+    linkHref: "/services",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const testimonialsData = [
     name: "Arjun Mehta",
     role: "Group Manager, InnovateCorp",
     linkText: "Explore our products for Large Enterprises",
-    linkHref: "/products",
+    linkHref: "/services",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const testimonialsData = [
     name: "Zara Ahmed",
     role: "Tax Payer, Mumbai, Maharashtra",
     linkText: "File ITRs yourself or seek expert assistance",
-    linkHref: "/products",
+    linkHref: "/services",
   },
   {
     id: 4,
