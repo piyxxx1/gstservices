@@ -44,7 +44,7 @@ const HeroSection = () => {
             <div className="inline-flex items-center bg-white/90 backdrop-blur-sm rounded-full py-3 px-6 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.1)] mb-6 border border-white/20 animate-fade-in-up">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
               <p className="text-gray-700 font-medium">
-                <span className="font-bold text-green-600 text-lg">₹541.86 Cr</span> Refund processed this year
+                <span className="font-bold text-green-600 text-lg">₹5 Cr</span> Refund processed this year
               </p>
             </div>
 
@@ -60,9 +60,18 @@ const HeroSection = () => {
             </h1>
 
             {/* Hero Image */}
-            <div className="mb-8 flex justify-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <div className="mb-0 flex justify-center animate-fade-in-up -mt-8" style={{animationDelay: '0.4s'}}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl animate-pulse"></div>
+                
+                {/* Bubble Effects */}
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute -top-8 right-8 w-6 h-6 bg-gradient-to-r from-pink-400/40 to-red-400/40 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+                <div className="absolute top-1/4 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400/50 to-orange-400/50 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-1/4 -left-6 w-5 h-5 bg-gradient-to-r from-green-400/30 to-teal-400/30 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
+                <div className="absolute -bottom-4 right-4 w-7 h-7 bg-gradient-to-r from-purple-400/40 to-pink-400/40 rounded-full animate-pulse" style={{animationDelay: '0.8s'}}></div>
+                <div className="absolute top-1/2 -left-8 w-3 h-3 bg-gradient-to-r from-cyan-400/60 to-blue-400/60 rounded-full animate-bounce" style={{animationDelay: '1.2s'}}></div>
+                
                 <Image 
                   src="/assest/smiley-businesswoman.png" 
                   alt="Smiley Businesswoman" 
@@ -74,8 +83,8 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Enhanced Action Cards */}
-            <div className="space-y-3 max-w-sm mx-auto relative z-20 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            {/* Enhanced Action Cards - Overlapping */}
+            <div className="space-y-3 max-w-sm mx-auto relative z-30 animate-fade-in-up -mt-16" style={{animationDelay: '0.6s'}}>
               <Link href="#" className="block group focus:outline-none focus:ring-0">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-500 p-4 flex items-center cursor-pointer border border-white/20 hover:border-white/40">
                   <div className="relative flex-shrink-0">
@@ -98,24 +107,24 @@ const HeroSection = () => {
                 </div>
               </Link>
               
-              <Link href="#" className="block group focus:outline-none focus:ring-0">
+              <Link href="tel:+918668616885" className="block group focus:outline-none focus:ring-0">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-500 p-4 flex items-center cursor-pointer border border-white/20 hover:border-white/40">
                   <div className="relative flex-shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-teal-400 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
                     <Image 
                       src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1751960822_group1814224094-4.svg?" 
-                      alt="Hire an expert icon" 
+                      alt="Free consultation icon" 
                       width={48} 
                       height={48} 
                       className="w-12 h-12 mr-4 relative z-10 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300 mb-1">Hire an expert</h3>
-                    <p className="text-gray-600 text-sm font-medium">ITR filed in 24 hours</p>
+                    <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300 mb-1">Free Consultation</h3>
+                    <p className="text-gray-600 text-sm font-medium">Get expert advice today</p>
                   </div>
                   <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold py-2 px-4 rounded-xl text-sm group-hover:from-green-600 group-hover:to-teal-600 transition-all duration-300 shadow-lg group-hover:shadow-xl flex-shrink-0">
-                    Book Now
+                    Call Now
                   </div>
                 </div>
               </Link>
@@ -168,23 +177,23 @@ const HeroSection = () => {
                 </div>
               </Link>
               
-              <Link href="#" className="block text-left focus:outline-none focus:ring-0 group">
+              <Link href="tel:+918668616885" className="block text-left focus:outline-none focus:ring-0 group">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.15)] transition-all duration-500 p-6 h-full flex flex-col border border-white/20 hover:border-white/40 hover:scale-105">
                   <div className="text-xs text-gray-500 mb-2 font-semibold text-center">24/7 Expert support</div>
                   <div className="relative mb-4 flex justify-center">
                     <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-teal-400 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
                     <Image 
                       src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1751960822_group1814224094-4.svg?" 
-                      alt="Hire an expert icon" 
+                      alt="Free consultation icon" 
                       width={48} 
                       height={48} 
                       className="w-16 h-16 relative z-10 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 text-center group-hover:text-green-600 transition-colors duration-300">Hire an expert</h3>
-                  <p className="text-gray-600 text-base mb-6 text-center">ITR filed in 24 hours</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 text-center group-hover:text-green-600 transition-colors duration-300">Free Consultation</h3>
+                  <p className="text-gray-600 text-base mb-6 text-center">Get expert advice today</p>
                   <div className="mt-auto pt-4 w-full text-center bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold py-3 rounded-xl hover:from-green-600 hover:to-teal-600 transition-all duration-300 text-base shadow-lg group-hover:shadow-xl">
-                    Book Now
+                    Call Now
                   </div>
                 </div>
               </Link>

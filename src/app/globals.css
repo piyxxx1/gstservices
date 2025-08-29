@@ -57,6 +57,45 @@
   .animate-float-gentle { 
     animation: float-gentle 4s ease-in-out infinite; 
   }
+  
+  /* Custom animations for products page */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fade-in-delay {
+    0% { opacity: 0; transform: translateY(20px); }
+    50% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes bounce-in {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 1.2s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fade-in-delay 2s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in 1.5s ease-out forwards;
+  }
 }
 
 @theme {
@@ -355,8 +394,9 @@
 
   /* Better focus states for accessibility */
   *:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
+    outline: none;
+    outline-offset: 0;
+    box-shadow: none;
   }
 
   /* Smooth transitions for interactive elements */

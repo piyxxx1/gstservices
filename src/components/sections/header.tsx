@@ -22,65 +22,65 @@ import {
 } from "@/components/ui/sheet";
 
 const products = [
-  { title: "Income Tax e Filing", href: "#", description: "File your income tax returns online" },
-  { title: "Tax Planning", href: "#", description: "Plan your taxes efficiently" },
-  { title: "ClearGST", href: "#", description: "GST filing and compliance" },
-  { title: "ClearTDS", href: "#", description: "TDS filing and management" },
-  { title: "ClearInvestment", href: "#", description: "Investment and mutual funds" },
-  { title: "ClearServices", href: "#", description: "Professional tax services" },
+  { title: "Income Tax e Filing", href: "/products", description: "File your income tax returns online" },
+  { title: "Tax Planning", href: "/products", description: "Plan your taxes efficiently" },
+  { title: "ClearGST", href: "/products", description: "GST filing and compliance" },
+  { title: "ClearTDS", href: "/products", description: "TDS filing and management" },
+  { title: "ClearInvestment", href: "/products", description: "Investment and mutual funds" },
+  { title: "ClearServices", href: "/products", description: "Professional tax services" },
 ];
 
 const resources = [
   {
     title: "Case Studies",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196404_case_studies.png",
     category: "read",
   },
   {
     title: "Opinion Notes",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683877966_opinion_notes.png",
     category: "read",
   },
   {
     title: "Product Guides",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196200_product_guides.png",
     category: "read",
   },
   {
     title: "Webinars",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196239_webinars.png",
     category: "watch",
   },
   {
     title: "Product Guides - Videos",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196252_product_guidevideos.png",
     category: "watch",
   },
   {
     title: "Events",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196264_events.png",
     category: "engage",
   },
   {
     title: "FAQs",
-    href: "#",
+    href: "/resources",
     icon: "https://assets1.cleartax-cdn.com/cleartax/images/1683196276_faqs.png",
     category: "engage",
   },
 ];
 
 const companyItems = [
-    { title: "About us", href: "#", description: "Learn more about our company"},
-    { title: "Contact us", href: "#", description: "Get in touch with our team"},
-    { title: "Careers", href: "#", description: "Explore job opportunities"},
-    { title: "Media & Press", href: "#", description: "Read our latest news"},
-    { title: "Trust & Safety", href: "#", description: "Our commitment to your security" },
+    { title: "About us", href: "/about-company", description: "Learn more about our company"},
+    { title: "Contact us", href: "/contact", description: "Get in touch with our team"},
+    { title: "Careers", href: "/careers", description: "Explore job opportunities"},
+    { title: "Media & Press", href: "/media", description: "Read our latest news"},
+    { title: "Trust & Safety", href: "/trust", description: "Our commitment to your security" },
 ]
 
 
@@ -151,7 +151,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <a 
-                href="#" 
+                href="/products" 
                 className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
               >
                 <span>Products</span>
@@ -160,34 +160,34 @@ export default function Header() {
 
             <NavigationMenuItem>
               <a 
-                href="#" 
+                href="/resources" 
                 className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
               >
                 <span>Resources</span>
               </a>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <a 
-                href="#" 
-                className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
-              >
-                <span>Company</span>
-              </a>
-            </NavigationMenuItem>
+                        <NavigationMenuItem>
+                <a 
+                  href="/about-company" 
+                  className="bg-transparent text-base font-medium text-gray-700 hover:text-blue-600 px-4 py-2 transition-colors focus:outline-none focus:ring-0"
+                >
+                  <span>About Company</span>
+                </a>
+              </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Desktop Login Button */}
+        {/* Desktop Call Button */}
         <Button asChild variant="outline" className="hidden lg:flex h-auto rounded-lg border-primary px-6 py-[9px] text-sm font-semibold text-primary transition-colors hover:bg-primary/5 hover:text-primary mr-4 sm:mr-6">
-          <a href="#">Login/Sign-up</a>
+          <a href="tel:+918668616885">📞 +91 8668616885</a>
         </Button>
 
         {/* Mobile Right Side */}
         <div className="flex items-center space-x-2 lg:hidden">
-          {/* Mobile Login Button */}
+          {/* Mobile Call Button */}
           <Button asChild variant="outline" className="h-9 rounded-lg border-primary px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/5 hover:text-primary">
-            <a href="#">Login</a>
+            <a href="tel:+918668616885">📞 Call</a>
           </Button>
           
           {/* Mobile Menu Button */}
@@ -202,63 +202,75 @@ export default function Header() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[350px] max-w-[90vw] overflow-y-auto">
-              <SheetHeader className="border-b pb-4 flex items-center justify-between">
-                <SheetTitle className="text-left text-xl font-bold text-gray-900">Menu</SheetTitle>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="h-8 w-8 hover:bg-gray-100"
-                  aria-label="Close menu"
-                >
-                  <X className="h-4 w-4" />
-                </Button>
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] max-w-[90vw] overflow-y-auto bg-gradient-to-b from-white to-gray-50">
+              <SheetHeader className="border-b border-gray-200 pb-8 bg-gradient-to-r from-blue-600 to-blue-700 -mx-6 -mt-6 px-6 pt-8 rounded-b-3xl shadow-lg">
+                <SheetTitle className="text-left text-2xl font-bold text-white flex items-center">
+                  <span className="mr-2">✨</span>
+                  Menu
+                </SheetTitle>
               </SheetHeader>
-              <div className="mt-6 space-y-8">
-                {/* Home Section */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 text-base">Home</h3>
-                  <div className="space-y-2">
-                    <MobileMenuItem title="Home" href="/" description="Back to homepage" />
+              <div className="mt-8 space-y-6 px-2">
+                {/* Navigation Links - Enhanced */}
+                <div className="space-y-3">
+                  <a 
+                    href="/" 
+                    className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-blue-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="mr-3 text-lg">🏠</span>
+                    <span>Home</span>
+                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+                  </a>
+                  <a 
+                    href="/products" 
+                    className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-green-600 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-green-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="mr-3 text-lg">📦</span>
+                    <span>Products</span>
+                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+                  </a>
+                  <a 
+                    href="/resources" 
+                    className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-purple-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-purple-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="mr-3 text-lg">📚</span>
+                    <span>Resources</span>
+                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+                  </a>
+                  <a 
+                    href="/about-company" 
+                    className="group flex items-center w-full text-left px-6 py-4 text-base font-semibold text-gray-700 hover:text-orange-600 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-orange-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="mr-3 text-lg">🏢</span>
+                    <span>About Company</span>
+                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+                  </a>
+                </div>
+
+                {/* Enhanced Mobile Call Button */}
+                <div className="pt-8 border-t border-gray-200">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-1 shadow-lg">
+                    <Button asChild className="w-full rounded-xl bg-white text-blue-600 px-6 py-4 text-base font-bold transition-all duration-300 hover:bg-blue-50 hover:shadow-xl transform hover:scale-105">
+                      <a href="tel:+918668616885">📞 Call +91 8668616885</a>
+                    </Button>
                   </div>
                 </div>
 
-                {/* Products Section */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 text-base">Products</h3>
-                  <div className="space-y-2">
-                    {products.map((item) => (
-                      <MobileMenuItem key={item.title} {...item} />
-                    ))}
+                {/* Additional Info */}
+                <div className="text-center pt-4">
+                  <p className="text-xs text-gray-500">Need help? Contact support</p>
+                  <div className="flex justify-center space-x-4 mt-3">
+                    <a 
+                      href="mailto:palmprintindia@gmail.com" 
+                      className="text-sm font-semibold text-gray-900 hover:text-blue-700 transition-colors duration-300 flex items-center tracking-wide"
+                    >
+                      <span className="mr-2 text-base">📧</span>
+                      palmprintindia@gmail.com
+                    </a>
                   </div>
-                </div>
-
-                {/* Resources Section */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 text-base">Resources</h3>
-                  <div className="space-y-2">
-                    {resources.map((item) => (
-                      <MobileMenuItem key={item.title} {...item} />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Company Section */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 text-base">Company</h3>
-                  <div className="space-y-2">
-                    {companyItems.map((item) => (
-                      <MobileMenuItem key={item.title} {...item} />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Mobile Login Button */}
-                <div className="pt-6 border-t border-gray-200">
-                  <Button asChild variant="outline" className="w-full rounded-lg border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 hover:text-primary">
-                    <a href="#">Login/Sign-up</a>
-                  </Button>
                 </div>
               </div>
             </SheetContent>

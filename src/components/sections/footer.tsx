@@ -349,75 +349,24 @@ const FooterSection = () => {
 
                 {/* Description Text */}
                 <div className="space-y-4 text-xs leading-relaxed">
-                     <p>Clear offers taxation & financial solutions to individuals, businesses, organizations & chartered accountants in India. Clear serves 1.5+ Million happy customers, 20000+ CAs & tax experts & 10000+ businesses across India.</p>
-                     <p>Efiling Income Tax Returns(ITR) is made easy with Clear platform. Just upload your form 16, claim your deductions and get your acknowledgment number online. You can efile income tax return on your income from salary, house property, capital gains, business & profession and income from other sources. Further you can also file TDS returns, generate Form-16, use our Tax Calculator software, claim HRA, check refund status and generate rent receipts for Income Tax Filing.</p>
-                     <p>CAs, experts and businesses can get GST ready with Clear GST software & certification course. Our GST Software helps CAs, tax experts & business to manage returns & invoices in an easy manner. Our Goods & Services Tax course includes tutorial videos, guides and expert assistance to help you in mastering Goods and Services Tax. Clear can also help you in getting your business registered for Goods & Services Tax Law.</p>
+                     <p>Palm Print offers taxation & financial solutions to individuals, businesses, organizations & chartered accountants in India. Palm Print serves 5000+ Million happy customers, 20+ CAs & tax experts & 1000+ businesses across India.</p>
+                     <p>Efiling Income Tax Returns(ITR) is made easy with Palm Print platform. Just upload your form 16, claim your deductions and get your acknowledgment number online. You can efile income tax return on your income from salary, house property, capital gains, business & profession and income from other sources. Further you can also file TDS returns, generate Form-16, use our Tax Calculator software, claim HRA, check refund status and generate rent receipts for Income Tax Filing.</p>
+                     <p>CAs, experts and businesses can get GST ready with Palm Print GST software & certification course. Our GST Software helps CAs, tax experts & business to manage returns & invoices in an easy manner. Our Goods & Services Tax course includes tutorial videos, guides and expert assistance to help you in mastering Goods and Services Tax. Palm Print can also help you in getting your business registered for Goods & Services Tax Law.</p>
                 </div>
 
                 {/* Company Info */}
                 <div className="text-center mt-10">
-                    <p className="text-xs font-semibold tracking-wide">CLEARTAX IS A PRODUCT BY DEFMACRO SOFTWARE PVT. LTD.</p>
+                    <p className="text-xs font-semibold tracking-wide">PALM PRINT IS A PRODUCT BY TOUCH PRINT TECHNOLOGIES PVT. LTD.</p>
                 </div>
 
                 {/* Bottom Section */}
                 <div className="mt-10 pt-8 border-t border-gray-700 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 text-xs">
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-x-4 lg:gap-x-6 gap-y-2">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of use</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms - ITR</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms - Financial Products & GST</a>
-                        <a href="#" className="hover:text-white transition-colors">Privacy - ITR</a>
-                        <a href="#" className="hover:text-white transition-colors">Privacy - Financial Products & GST</a>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                        <div className="flex items-center space-x-2">
-                             <Image 
-                               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/images/1656664735_image-19.webp?" 
-                               alt="ISO 27001" 
-                               width={32} 
-                               height={32} 
-                               className="w-8 h-8"
-                             />
-                            <div>
-                               <p className="font-semibold text-xs">ISO 27001</p>
-                               <p className="text-xs">Data Center</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                             <Image 
-                               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1656664658_image1-50.jpg?" 
-                               alt="SSL Certified" 
-                               width={32} 
-                               height={32} 
-                               className="w-8 h-8"
-                             />
-                            <div>
-                               <p className="font-semibold text-xs">SSL Certified Site</p>
-                               <p className="text-xs">128-bit encryption</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                {/* Final Bottom Section */}
+                                {/* Final Bottom Section */}
                 <div className="mt-8 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
                     <div className="flex flex-wrap justify-center lg:justify-start gap-x-4 lg:gap-x-6 gap-y-2 text-xs">
-                        <a href="#" className="hover:text-white transition-colors">Legal - Defmacro</a>
-                        <a href="#" className="hover:text-white transition-colors">Legal - Xpedize</a>
                     </div>
-                                         <div className="flex space-x-3">
-                          {socialIcons.map(socialIcon => {
-                            const IconComponent = socialIcon.icon;
-                            return (
-                              <div key={socialIcon.alt} className="cursor-default group">
-                                <IconComponent 
-                                  className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                                  style={{ color: socialIcon.color }}
-                                />
-                              </div>
-                            );
-                          })}
-                     </div>
                 </div>
 
             </div>

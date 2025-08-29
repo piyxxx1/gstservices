@@ -13,31 +13,31 @@ interface ServiceInfo {
 const servicesData: ServiceInfo[] = [
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/24752bcd-1c44-4e33-a907-d28c0c63f9d8-24.png?",
-    alt: "Self ITR Filing Icon",
-    title: "Self ITR Filing",
+    alt: "ITR Filing Icon",
+    title: "ITR Filing",
     description: "ITR filing for every tax situation",
-          href: "#",
+          href: "/products",
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1689834900_group1814218524-25.png?",
-    alt: "Expert Filing Icon",
-    title: "Expert Filing",
-    description: "ITR filed by India's top Tax Experts",
-          href: "#",
+    alt: "Company Icon",
+    title: "Company",
+    description: "Company formation and registration services",
+          href: "/products",
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1689834930_group1814218517-26.png?",
-    alt: "Taxcloud Icon",
-    title: "Taxcloud",
-    description: "ITR filing software for Tax Experts",
-          href: "#",
+    alt: "Trademark Icon",
+    title: "Trademark",
+    description: "Protect your brand with trademark registration",
+          href: "/products",
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1c380469-b051-4882-a1dc-d71fe81fed7a-27.png?",
-    alt: "GST software Icon",
-    title: "GST software",
+    alt: "GST Icon",
+    title: "GST",
     description: "G1-G9 filings made 3x faster",
-          href: "#",
+          href: "/products",
   },
 ];
 
@@ -79,6 +79,15 @@ const ServicesOverview = () => {
               <ServiceCard {...service} />
             </div>
           ))}
+        </div>
+        <div className="mt-8 sm:mt-10 flex justify-center">
+          <a
+            href="/products"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white font-semibold shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-0"
+          >
+            View all
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>

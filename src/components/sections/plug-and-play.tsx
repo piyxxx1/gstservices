@@ -11,7 +11,7 @@ const tabsData = [
     products: [
       {
         icon: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/svgs/1603968068_ic_itr-24.svg?',
-        title: 'Self ITR Filing',
+        title: 'ITR Filing',
         description: 'File tax returns in under 3 minutes',
         image: '/assest/plugin-and-play-assest/1607343696_fileitr.png',
       },
@@ -38,7 +38,7 @@ const tabsData = [
       {
         icon: 'https://assets1.cleartax-cdn.com/cleartax/images/1606372771_einvoicing3.png',
         title: 'e-Invoicing',
-        description: 'Fast, dependable and afforable solution',
+        description: 'Fast, dependable and affordable solution',
         image: 'https://assets1.cleartax-cdn.com/cleartax/images/1605871021_desktop_fold_plugandplay_enterprise_cleareinvoicing.png',
       },
       {
@@ -87,7 +87,7 @@ const tabsData = [
       },
       {
         icon: 'https://assets1.cleartax-cdn.com/cleartax/images/1603968183_ic_taxcloud.svg',
-        title: 'TaxCloud',
+        title: 'PalmPrint Cloud',
         description: 'Seamless ITR filing platform for accountants',
         image: 'https://assets1.cleartax-cdn.com/cleartax/images/1605870742_desktop_fold_plugandplay_taxexperts_cleartaxcloud.png',
       },
@@ -118,7 +118,7 @@ const PlugAndPlaySection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="font-bold font-display text-2xl sm:text-3xl lg:text-4xl xl:text-[44px] leading-tight text-slate-800 mb-4">
-            Plug and Play
+            PalmPrint Solutions
         </h2>
           <p className="w-full max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-slate-500 font-normal">
           An exhaustive portfolio of cloud based products you could use from day one for personal and business compliance

@@ -1,7 +1,6 @@
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import ServicesOverview from "@/components/sections/services-overview";
-import TrustedBrands from "@/components/sections/trusted-brands";
 import NumbersStats from "@/components/sections/numbers-stats";
 import UserCategories from "@/components/sections/user-categories";
 import ProductsForEveryone from "@/components/sections/products-for-everyone";
@@ -21,7 +20,6 @@ export default function Home() {
       <Header />
       <Hero />
       <ServicesOverview />
-      <TrustedBrands />
       <NumbersStats />
       <UserCategories />
       <ProductsForEveryone />

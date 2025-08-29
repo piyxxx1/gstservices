@@ -15,62 +15,16 @@ const faqData = [
   },
   {
     question: "How can I claim deductions for tax saving?",
-    answer: (
-      <>
-        You should file an income tax return to claim tax deductions for tax
-        savings such as{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          ELSS
-        </a>
-        , PPF, NSC investments and for payments such as housing loan repayments,
-        insurance premium and donations.
-      </>
-    ),
+    answer: "You should file an income tax return to claim tax deductions for tax savings such as ELSS, PPF, NSC investments and for payments such as housing loan repayments, insurance premium and donations.",
   },
   {
     question:
       "I receive my salary income after deduction of TDS. Am I required to file an income tax return?",
-    answer: (
-      <>
-        You are required to file an{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          income tax
-        </a>{" "}
-        return once your annual income exceeds Rs 2.5 lakh. A deduction of TDS
-        does not replace the requirement to file ITR. While e-filing your ITR,
-        you should furnish the details of your annual income, claim deductions
-        and credit for TDS deducted by your employer.
-      </>
-    ),
+    answer: "You are required to file an income tax return once your annual income exceeds Rs 2.5 lakh. A deduction of TDS does not replace the requirement to file ITR. While e-filing your ITR, you should furnish the details of your annual income, claim deductions and credit for TDS deducted by your employer.",
   },
   {
     question: "How do I check TDS details from my form 26AS?",
-    answer: (
-      <>
-        You can check your{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          Form 26AS
-        </a>{" "}
-        from your e-filing login. ClearTax's e-filing software auto-populates
-        the TDS details from your{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          Form 26AS
-        </a>{" "}
-        in your income tax return.
-      </>
-    ),
+    answer: "You can check your Form 26AS from your e-filing login. ClearTax's e-filing software auto-populates the TDS details from your Form 26AS in your income tax return.",
   },
   {
     question: "How can I claim an income tax refund?",
@@ -86,50 +40,12 @@ const faqData = [
   },
   {
     question: "How to e-verify my ITR?",
-    answer: (
-      <>
-        You can e-verify your ITR within 120 days from the date of filing. You
-        can e-verify using your net banking account or{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          Aadhaar
-        </a>{" "}
-        based OTP. A failure to e-verify your ITR can invalidate your ITR
-        filing.
-      </>
-    ),
+    answer: "You can e-verify your ITR within 120 days from the date of filing. You can e-verify using your net banking account or Aadhaar based OTP. A failure to e-verify your ITR can invalidate your ITR filing.",
   },
   {
     question: "How to choose a suitable mutual fund for SIP?",
-    answer: (
-      <>
-        You should not select a{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          mutual fund
-        </a>{" "}
-        for{" "}
-        <a href="#" className="text-primary hover:underline">
-          SIP
-        </a>{" "}
-        only by considering the past performance of the fund and fund manager.
-        To choose a suitable mutual fund, you also need to check if the fund’s
-        investment objective is in line with your goals. You can also use our{" "}
-        <a
-          href="#"
-          className="text-primary hover:underline"
-        >
-          SIP calculator
-        </a>{" "}
-        to estimate the return on your mutual fund investments.
-      </>
-    ),
+    answer: "You should not select a mutual fund for SIP only by considering the past performance of the fund and fund manager. To choose a suitable mutual fund, you also need to check if the fund's investment objective is in line with your goals. You can also use our SIP calculator to estimate the return on your mutual fund investments.",
   },
-
 ];
 
 export default function FaqSection() {
@@ -156,10 +72,7 @@ export default function FaqSection() {
           ))}
         </Accordion>
         <p className="text-center text-muted-foreground mt-8 sm:mt-12 text-sm sm:text-base">
-          Have queries? Visit our{" "}
-          <a href="#" className="text-primary font-semibold hover:underline">
-            support center
-          </a>
+          Have queries? Visit our support center
         </p>
       </div>
     </section>

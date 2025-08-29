@@ -5,7 +5,6 @@ interface CategoryCardProps {
   title: string;
   subtitle: React.ReactNode;
   description: string;
-  illustrationUrl: string;
   link: string;
 }
 
@@ -14,40 +13,32 @@ const categories: CategoryCardProps[] = [
     title: "For Individuals",
     subtitle: <>For salaried, self <br />employed professionals.</>,
     description: "File income tax returns in 3 min, invest and grow your wealth, get expert assistance.",
-    illustrationUrl: "https://assets1.cleartax-cdn.com/cleartax/images/1603290610_forindividual.svg",
-    link: "#"
+    link: "/products"
   },
   {
     title: "For Tax Experts",
     subtitle: <>For tax experts and<br/>professionals.</>,
     description: "Explore how tax experts save 2-7% in taxes for their clients with our GST, ITR and TDS suite.",
-    illustrationUrl: "https://assets1.cleartax-cdn.com/cleartax/images/1603290875_fortaxexpert.svg",
-    link: "#"
+    link: "/products"
   },
   {
     title: "For SMEs",
     subtitle: <>For less than ₹50Cr<br />turnover businesses.</>,
     description: "Explore SME suite including GST, Invoicing and TDS solution along with Clear app.",
-    illustrationUrl: "https://assets1.cleartax-cdn.com/cleartax/images/1603290680_forsmes.svg",
-    link: "#"
+    link: "/products"
   },
   {
     title: "For Enterprise",
     subtitle: <>For more than ₹50Cr<br />turnover businesses.</>,
     description: "Explore enterprise-grade stack of GST, e-Invoicing, e-Waybill, Vendor solutions and more.",
-    illustrationUrl: "https://assets1.cleartax-cdn.com/cleartax/images/1603290947_forenterprise.svg",
-    link: "#"
+    link: "/products"
   }
 ];
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ title, subtitle, description, illustrationUrl, link }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({ title, subtitle, description, link }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block group h-full">
       <div className="bg-[#F6F8FC] rounded-xl p-6 h-full transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white group-hover:-translate-y-1 group-hover:shadow-[0px_10px_15px_rgba(0,0,0,0.1)]">
-        <div 
-          className="h-[85px] w-full mb-6 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${illustrationUrl})` }}
-        />
         <div className="relative">
           <div>
             <h3 className="text-xl font-bold text-text-primary group-hover:text-white transition-colors duration-300">

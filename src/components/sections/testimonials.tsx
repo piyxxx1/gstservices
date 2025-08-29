@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,47 +16,38 @@ const testimonialsData = [
   {
     id: 1,
     title: "600,000+ businesses trust our SMB offerings",
-    quote:
-      "Earlier I used to call multiple customers, track my bank account or check messages for payments. Now I can send UPI links in reminders and customers can pay from home. Compliance is easy.",
-    avatar:
-      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1605861410_shalini_prasad1-38.png?",
-    name: "Shalini Prasad",
-    role: "Business Owner, Printing Goods",
+    quote:"Earlier I used to call multiple customers, track my bank account or check messages for payments. Now I can send UPI links in reminders and customers can pay from home. Compliance is easy.",
+    name: "Aisha Khan",
+    role: "Business Owner, TechFlow Solutions",
     linkText: "Explore products for Small Businesses",
-    linkHref: "#",
+    linkHref: "/products",
   },
   {
     id: 2,
     title: "Over 1,200 enterprises use our compliance stack",
     quote: "ClearTax has made core GST returns simple and easy for us. Instead of taking 7 to 8 days to do reconciliation, now it’s just a matter of hours. The people there assist us at any given point in time.",
-    avatar:
-      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1605862455_manivanan_p-39.png?",
-    name: "Manivannan P",
-    role: "Group Manager, Titan",
+    name: "Arjun Mehta",
+    role: "Group Manager, InnovateCorp",
     linkText: "Explore our products for Large Enterprises",
-    linkHref: "#",
+    linkHref: "/products",
   },
   {
     id: 3,
     title: "Over 5 million tax payers have filed with us",
     quote: "I have been using ClearTax’s DIY e-filing of ITR for last 3 years. I use it for my entire family’s income tax returns. Very effective and least time consuming.",
-    avatar:
-      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1606110840_mrmanmohan1-40.png?",
-    name: "Mr. Manmohan",
-    role: "Tax Payer, Kochi, Kerala",
+    name: "Zara Ahmed",
+    role: "Tax Payer, Mumbai, Maharashtra",
     linkText: "File ITRs yourself or seek expert assistance",
-    linkHref: "#",
+    linkHref: "/products",
   },
   {
     id: 4,
     title: "More than 60,000 tax experts use our platform",
     quote: "My executives could learn it so quickly and we implemented literally in a couple of days. I am impressed with time-saving features embedded in the software like advanced reconciliation of 2A data with invoices.",
-    avatar:
-      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/144fc896-0ad2-4e5f-b1f5-7c4919c72a13-cleartax-in/assets/icons/1602838327_carouselanilchakravarthy-41.png?",
-    name: "Mr. Anil Chakravarthy",
-    role: "Tax Suite user",
+    name: "Krishna Reddy",
+    role: "Senior Tax Consultant, FinExpert Associates",
     linkText: "Explore products for tax experts",
-    linkHref: "#",
+    linkHref: "/products",
   },
 ];
 
@@ -73,7 +63,7 @@ export default function Testimonials() {
           className="w-full"
         >
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-12 gap-4 sm:gap-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-tight font-extrabold text-text-primary text-center sm:text-left">
+            <h2 className="text-2xl sm:text-3xl lg:4xl leading-tight font-extrabold text-text-primary text-center sm:text-left">
               Trusted by experts and businesses
             </h2>
             <div className="flex items-center space-x-2">
@@ -100,26 +90,17 @@ export default function Testimonials() {
                       {testimonial.quote}
                     </p>
                     <div className="mt-6 sm:mt-8">
-                      <div className="flex items-center mb-4 sm:mb-6">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          width={50}
-                          height={50}
-                          className="rounded-full mr-3 sm:mr-4 object-cover w-10 h-10 sm:w-12 sm:h-12"
-                        />
-                        <div>
-                          <p className="font-semibold text-xs sm:text-sm text-text-primary leading-relaxed">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-xs text-text-secondary leading-relaxed">
-                            {testimonial.role}
-                          </p>
-                        </div>
+                      <div className="mb-4 sm:mb-6">
+                        <p className="font-semibold text-xs sm:text-sm text-text-primary leading-relaxed">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-xs text-text-secondary leading-relaxed">
+                          {testimonial.role}
+                        </p>
                       </div>
                       <a
                         href={testimonial.linkHref}
-                        className="text-xs sm:text-sm font-semibold text-primary flex items-center group leading-relaxed"
+                        className="text-xs sm:text-sm font-semibold text-primary flex items-center group leading-relaxed focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
                       >
                         {testimonial.linkText}
                         <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
