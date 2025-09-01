@@ -106,7 +106,7 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
               Something went wrong!
             </h1>
             <p className="text-muted-foreground">
-              An unexpected error occurred
+              An unexpected error occurred. Please try again.
             </p>
           </div>
           <div className="space-y-2">

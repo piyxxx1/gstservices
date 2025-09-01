@@ -47,7 +47,7 @@ const testimonialsData = [
     name: "Krishna Reddy",
     role: "Senior Tax Consultant, FinExpert Associates",
     linkText: "Explore products for tax experts",
-    linkHref: "/products",
+    linkHref: "/services",
   },
 ];
 
